@@ -16,6 +16,15 @@ class ClaudeTap < Formula
     bin.install_symlink prefix/"macos/uninstall.sh" => "claude-tap-uninstall"
   end
 
+  # Re-run setup after every `brew install` / `brew upgrade` so new Swift
+  # sources are recompiled, hooks stay registered, and the AX permission
+  # prompt (if still needed) fires at upgrade time. setup.sh is idempotent
+  # and `--quiet` suppresses its informational lines — failures are
+  # logged but do not fail the brew install.
+  def post_install
+    system "#{bin}/claude-tap-setup", "--quiet"
+  end
+
   def caveats
     <<~EOS
       Run the setup to get started:
