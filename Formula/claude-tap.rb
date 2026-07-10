@@ -1,9 +1,9 @@
 class ClaudeTap < Formula
   desc "Dynamic Island-style notifications, sound alerts and status line for Claude Code"
   homepage "https://github.com/EdoardoCroci/claude-tap"
-  url "https://github.com/EdoardoCroci/claude-tap/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "8715df137103f3997ebf37ca8e122d3d72fd9487618f17ac47e2ca89add13ac1"
-  version "1.9.0"
+  url "https://github.com/EdoardoCroci/claude-tap/archive/refs/tags/v1.10.0.tar.gz"
+  sha256 "5e926936cc10fadb36b79300f16658505879adbcba98633e4d9502e27b17aed0"
+  version "1.10.0"
   license "MIT"
 
   depends_on :macos
